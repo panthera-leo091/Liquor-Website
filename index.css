@@ -1,0 +1,610 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ************************************************************* */
+/* commen */
+.apply-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.half {
+    width: 50%;
+    height: 1rem;
+}
+
+*:hover {
+    opacity: 1;
+}
+
+.main * {
+    color: white;
+}
+
+.black,
+.black * {
+    color: #000 !important;
+}
+
+.brown {
+    color: brown !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fade {
+    opacity: .6;
+}
+
+
+
+/* Animation */
+.left-glow img {
+    animation-name: left-glow;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes left-glow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+/* ************************************************************* */
+/* body{
+    content: "";
+    transform: rotate(0deg);
+    width: 100%;
+    background: url(/liquorstore-master/images/bg_2.jpg) no-repeat center center/cover;
+    position: static;
+    height: 100vh;
+    z-index: -10;
+} */
+.apply-bg {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./img/bg_2.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: brown;
+    height: 1.5rem;
+}
+
+.header-left,
+.header-right {
+    /* justify-content: space-around; */
+    width: 50%;
+}
+
+.head-select div a {
+    margin: 0 .8rem;
+    font-size: large;
+    text-decoration: none;
+    color: white;
+}
+
+.upper-part {
+    position: relative;
+    top: 0;
+    background: rgba(50, 50, 50, .5);
+    transition: all .5s ease;
+}
+
+#nav-bar {
+    justify-content: space-around;
+    padding: .6em 0;
+    font-size: x-large;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 1.52rem;
+    transition: all .5s ease;
+}
+
+.navigation {
+    margin-right: 2rem;
+    font-weight: lighter;
+    font-size: large;
+}
+
+.s1-bg-color {
+    /* height: 5rem; */
+    background: rgba(245, 245, 245, 0.95) !important;
+    color: #000 !important;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.s1-pos {
+    /* height: 5rem; */
+    top: 0 !important;
+}
+
+.s1-bg-color .logo span {
+    color: brown !important;
+}
+
+.s1-bg-color .logo {
+    font-weight: bold;
+}
+
+.nav-list a:hover,
+.nav-list .dropdown:hover,
+.dropdown:hover ion-icon,
+.logo a:hover,
+.cart:hover ion-icon .s1-bg-color .logo:hover,
+.s1-bg-color .nav-list:hover {
+    color: brown !important;
+    cursor: pointer !important;
+}
+
+.s1-bg-color .logo:hover span {
+    color: #000 !important;
+}
+
+.nav-list {
+    /* text-decoration: none; */
+    justify-content: space-around;
+}
+
+.nav-list a,
+.logo a,
+.cart a,
+.nav-list .drop {
+    text-decoration: none;
+    margin: 0 2rem;
+}
+
+.cart {
+    margin: 0 3rem;
+}
+
+.dropitem a {
+    margin: 0 .8rem 0 .6rem;
+}
+
+.dropitem ul li {
+    margin: .5rem 0;
+    font-size: large;
+}
+
+#dropitem {
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* border: solid #000; */
+    align-items: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 7px;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: all .6s ease;
+    position: absolute;
+    top: 2.8rem;
+    transform-origin: top;
+    background: transparent;
+    backdrop-filter: blur(1000px);
+}
+
+#drop:hover #dropitem {
+    /* visibility: visible; */
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.s2-select {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    transform: rotate(-5deg);
+    z-index: 1;
+    position: relative;
+    width: 95vw;
+}
+
+.part1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+/* .s1-select::after{
+    content: "";
+    transform: rotate(0deg); 
+    width: 100%;
+    background: url(/liquorstore-master/images/bg_2.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -10;
+} */
+.shop-now {
+    background: brown;
+    padding: .5rem;
+    border-radius: 10px;
+    margin: 1rem .4rem 0 0;
+}
+
+.read-more {
+    padding: .5rem;
+    border: solid white;
+    margin: 1rem 0 0 .4rem;
+}
+
+.s3-select {
+    /* height: 2rem; */
+    background: rgb(165, 42, 42);
+    color: #000;
+    margin: 1rem 0;
+    padding: 0 5rem;
+}
+
+.s3-common {
+    /* margin: 0 2rem; */
+    padding: 1rem;
+}
+
+.s3-part2 {
+    padding: 3rem 5rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .3));
+}
+
+.s3-part3 {
+    padding: 3rem 5rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .6));
+
+}
+
+.s4-select {
+    background: white;
+    padding: 5rem 15rem;
+}
+
+.s4-img img {
+    height: 23rem;
+}
+
+.s4-part2 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 5rem;
+}
+
+.s4-part2 * {
+    color: #000;
+    margin: .8rem 0;
+}
+
+.s4-part2 p {
+    opacity: .8;
+}
+
+.s5-select {
+    background: white;
+}
+
+.s5-select img {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    margin: 0 2rem;
+    padding: 1rem;
+    border: solid brown;
+    transition: all .5s;
+}
+
+.s5-select .brand-common:hover img {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.s6-heading {
+    margin: 7rem 0;
+    text-align: center;
+}
+
+.s6-select {
+    margin: 0 7rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.s6-select .prodect {
+    /* border: solid rgba(165, 42, 42, 0.692); */
+    /* padding: 1rem; */
+    /* margin: 1.5rem 0; */
+    /* border-radius: 16px; */
+    display: inline-block;
+    transform: scale(.9, .9);
+    font-size: x-large;
+    text-align: center;
+    transition: all .5s ease;
+    height: 502px !important;
+}
+
+.s6-select .prodect:hover {
+    transform: scale(1, 1);
+}
+
+.s6-select .prodect img {
+    height: 400px;
+    width: 266px;
+    border-radius: 6px;
+}
+
+.prodect .p-info {
+    width: 266px;
+    padding: 8px 0;
+}
+
+.p-info span {
+    font-size: large;
+}
+
+.p-info h3 {
+    font-size: x-large;
+}
+
+.p-info p {
+    padding: 10px 0;
+    font-size: medium;
+}
+
+.all-product a {
+    text-decoration: none;
+    height: 2rem;
+    width: 23rem;
+    border-radius: 5px;
+    background: brown;
+    margin: 0 0 2rem 0;
+}
+
+.s7-select {
+    /* height: 500px; */
+    padding: 7rem 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/bg_4.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    flex-direction: column;
+}
+
+.s7-select .clients {
+    margin: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row !important;
+}
+
+.s7-select .client {
+    /* width: 20%; */
+    padding: 2rem 1rem;
+    margin: 0 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+}
+
+.s7-select .client p {
+    line-height: 2rem;
+    font-style: italic;
+}
+
+.s7-select .client img {
+    /* position: absolute; */
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+.client .control {
+    margin: 30px 0 0 0;
+}
+
+.client .control .text {
+    margin: 0 3rem;
+}
+
+.client .control .text h3 {
+    margin: .5rem 0;
+}
+
+.s8-select {
+    /* text-align: center; */
+    flex-direction: column;
+    border: solid red;
+    margin: 7rem;
+}
+
+.s8-select .blogs {
+    /* flex-wrap: wrap; */
+    display: flex;
+    border: solid red;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog {
+    /* border: solid black; */
+    line-height: 2rem;
+}
+
+.s8-select .blog img {
+    width: 13rem;
+    height: 100% !important;
+}
+
+.footer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    color: #f0ffff;
+}
+
+.socal-color {
+    /* display: flex;*/
+    background: brown;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.footer {
+    padding: 7rem;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer ul li::before {
+    content: "> ";
+}
+
+.footer .f-store a {
+    text-decoration: none;
+    color: #f0ffff;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.footer h2 {
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 0 0 3rem 0;
+}
+
+.footer .f-store,
+.footer .account,
+.footer .info,
+.footer .q-link,
+.footer .misc {
+    /* border: solid red; */
+    width: 500px;
+    margin: 1rem;
+    line-height: 2rem;
+}
+
+.footer .f-store p {
+    margin-top: 2.3rem;
+}
+
+.footer .socal {
+    margin: 1.5rem 0 0 1rem;
+}
+
+.copyright {
+    height: 5rem;
+    text-align: center;
+    color: #f0ffff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.99));
+    padding: 2rem;
+}
+
+
+
+
+/* imported from E-commmace */
+/* barbad h BC kam nahi kar rha sala */
+/* ..footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+..footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    margin-bottom: 20px;
+}
+
+..footer .logo{
+    margin-bottom: 30px;
+}
+..footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+..footer p{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+..footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+.footer .copyright{
+    display: flex;
+    justify-content: center;
+    background: #000;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 13px;
+
+} */
+
+
+
+
+
+
+
+
+/*  not working
+    .s5-select .brand-common:hover img::before{
+    content: "";
+    color: red !important;
+    z-index: 100;
+    position: relative;
+    position: absolute;
+    top: calc(50% - 2rem);
+    left: calc(50% - 2rem);
+    background: red;
+    border: solid blue;
+    animation: imgeffect .5s ease 0 infinite forwards forwards;
+}
+@keyframes imgeffect {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+} */
+
+
+
+/* ***************************************** */
+/* hiding */
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.l-style {
+    list-style: none;
+}

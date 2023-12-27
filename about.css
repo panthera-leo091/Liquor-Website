@@ -1,0 +1,13 @@
+.s2-select{
+    transform: rotate(0deg);
+    flex-direction: row;
+    height: 50vh;
+}
+.s2-select a,
+.s2-select .select-a{
+    text-decoration: none;
+    font-size: xx-large;
+}
+.s2-select a:hover{
+    text-decoration: underline;
+}
